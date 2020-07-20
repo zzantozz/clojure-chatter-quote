@@ -59,7 +59,7 @@
 (def quote-tracking-file-name-base "sent-quotes-")
 
 ; The log file to write quotes to when sent.
-(def log-file (File. (System/getProperty "user.home") ".chatter-quote.log"))
+(def log-file (File. (System/getProperty "user.home") "chatter-quote/quotes.log"))
 
 (defn quote-tracking-file
   "Returns the tracking file that's keeping track of which quotes have been sent in

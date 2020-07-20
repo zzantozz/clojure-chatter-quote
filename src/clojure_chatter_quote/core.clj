@@ -21,10 +21,10 @@
   (database/init)
   (engine/start)
   (println "Adding quotes from quote file")
-  (doseq [quote (quotes-from-file (File. (System/getProperty "user.home") "quotes.txt"))]
-    (database/add-quote quote "initial-group"))
+  (doseq [quote (quotes-from-file (File. (System/getProperty "user.home") "chatter-quote/jen-quotes.txt"))]
+    (database/add-quote quote "jen-quotes"))
   (println "Adding schedule to send entered quotes")
-  (database/add-schedule "initial-group-schedule" "0 0 08-21/3 * * ?" ["initial-group"])
+  (database/add-schedule "jen-quotes-schedule" "0 0 08-21/3 * * ?" ["jen-quotes"])
   (println "All done with initial setup; scheduler takes over from here.")
 ;  (database/add-quote "Test quote 1" ["tag1"])
 ;  (database/add-quote "Test quote 2" ["tag2"])
